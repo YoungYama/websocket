@@ -73,15 +73,15 @@ public class SysWebSocketPool {
 		SysWebSocketPool.onlineCount--;
 	}
 
-	public static synchronized Map<String, SysWebSocket> getSysWebSocketMap() {
+	public static Map<String, SysWebSocket> getSysWebSocketMap() {
 		return SysWebSocketPool.sysWebSocketMap;
 	}
 
-	public static synchronized void addSysWebSocket(String userId, SysWebSocket sysWebSocket) {
+	public static void addSysWebSocket(String userId, SysWebSocket sysWebSocket) {
 		SysWebSocketPool.sysWebSocketMap.put(userId, sysWebSocket);
 	}
 
-	public static synchronized void removeSysWebSocket(String userId) {
+	public static void removeSysWebSocket(String userId) {
 		SysWebSocketPool.sysWebSocketMap.remove(userId);
 	}
 
